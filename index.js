@@ -1,5 +1,11 @@
 const farmAnimals = 'cow horse sheep pig chicken';
 
+let farmAnimalsArr = farmAnimals.split(" ");
+console.log(farmAnimalsArr)
+
+let farmAnimalsObj = {...farmAnimalsArr};
+console.log(farmAnimalsObj)
+
 const colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 
 const muppet = {
@@ -25,6 +31,7 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
+
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
@@ -46,3 +53,39 @@ const nestedMuppet = {
 // 7. Use destructuring to assign all variables using the keys as the variable names
 
 // 8. Use destructuring to assign songs 2 and 4, and Kermit's job and partner
+
+
+
+
+// const person = {
+//   first: 'Wes',
+//   last: 'Bos',
+//   country: 'Canada',
+//   city: 'Hamilton',
+//   twitter: '@wesbos'
+// };
+// //instead of doing this vvv which is DRY
+// const first = person.first;
+// const last = person.last;
+//we destructure them in a single like like below:
+// const {first, last} = person;
+//the curly bracket created above is now a destructuring syntax
+//this changes the scope of the variable. this comes in handy when we have deeply nested data. 
+//for example:
+
+// const wes = {
+//   first: 'wes',
+//   last: 'bos',
+//   links: {
+//     social: {
+//       twitter: 'https://twitter.com/wesbos',
+//       facebook: 'https://facebook.com/wesbos.developer',
+//     }, 
+//     web: {
+//       blog: 'https://wesbos.com'
+//   }
+// }
+// };
+// const {twitter, facebook} = wes.links.social;
+// console.log(twitter, facebook);
+
